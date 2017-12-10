@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>water</artifactId>
+        <groupId>com.jay</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cmbc</artifactId>
+    <name>民生接口</name>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>wxpay.cmbc.com.cn</groupId>
+            <artifactId>sadk-cmbc</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/SADK-CMBC-3.1.0.8.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>wxpay.cmbc.com.cn</groupId>
+            <artifactId>gson</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/gson-2.2.2.jar</systemPath>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+    </dependencies>
+
+</project>

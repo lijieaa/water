@@ -2,7 +2,8 @@ spring:
   profiles:
     include: >
       a,
-      weixin
+      weixin,
+      cmbc-dev
 security:
   basic:
     enabled: false

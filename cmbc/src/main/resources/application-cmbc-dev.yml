@@ -1,0 +1,2 @@
+lcbpPay: http://wxpay.cmbc.com.cn:1080/mobilePlatform/appserver/lcbpPay.do
+queryMchnt: http://wxpay.cmbc.com.cn:1080/mobilePlatform/lcbpService/queryMchnt.do
