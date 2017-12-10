@@ -1,0 +1,14 @@
+weixin-client:
+  clientId: wx8be44989f5440994
+  clientSecret: 252116d9a84cc844e1b6823b32435f33
+  accessTokenUri: https://api.weixin.qq.com/cgi-bin/token
+  authenticationScheme: form
+  grantType: client_credential
+
+
+weixin-client-test:
+  clientId: wx69360391a42a251c
+  clientSecret: d4624c36b6795d1d99dcf0547af5443d
+  accessTokenUri: https://api.weixin.qq.com/cgi-bin/token
+  authenticationScheme: form
+  grantType: client_credential
