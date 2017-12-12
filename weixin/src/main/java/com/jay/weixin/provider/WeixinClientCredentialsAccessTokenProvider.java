@@ -7,15 +7,13 @@ import org.springframework.security.oauth2.client.resource.OAuth2ProtectedResour
 import org.springframework.security.oauth2.client.token.AccessTokenRequest;
 import org.springframework.security.oauth2.client.token.RequestEnhancer;
 import org.springframework.security.oauth2.client.token.grant.client.ClientCredentialsAccessTokenProvider;
+import org.springframework.stereotype.Component;
 import org.springframework.util.MultiValueMap;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * Created by jay on 2017/12/8.
- */
 public class WeixinClientCredentialsAccessTokenProvider extends ClientCredentialsAccessTokenProvider {
 
     public WeixinClientCredentialsAccessTokenProvider() {

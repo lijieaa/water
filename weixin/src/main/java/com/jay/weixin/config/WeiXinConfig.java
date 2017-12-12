@@ -15,7 +15,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableOAuth2Client
 public class WeiXinConfig {
 
-    @Bean
+    @Bean("wxRestTemplate")
     public OAuth2RestOperations restTemplate(OAuth2ClientContext oauth2ClientContext) {
         OAuth2RestTemplate oAuth2RestTemplate = new OAuth2RestTemplate(resource(), oauth2ClientContext);
         oAuth2RestTemplate.setRetryBadAccessTokens(true);

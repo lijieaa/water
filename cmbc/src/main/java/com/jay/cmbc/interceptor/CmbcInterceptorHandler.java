@@ -4,6 +4,7 @@ import org.apache.commons.io.IOUtils;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
+import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -14,7 +15,7 @@ public class CmbcInterceptorHandler extends HandlerInterceptorAdapter {
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         String encryptMsg = IOUtils.toString(request.getInputStream(), "utf-8");
-
+        ServletInputStream inputStream = request.getInputStream();
         System.out.println(encryptMsg);
         super.postHandle(request, response, handler, modelAndView);
     }

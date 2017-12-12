@@ -16,11 +16,11 @@ import java.util.List;
 
 //@Configuration
 public class MvcConfig extends WebMvcConfigurerAdapter{
-   /* @Override
+   @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new CmbcInterceptorHandler()).addPathPatterns("/cmbc*//**");
+        registry.addInterceptor(new CmbcInterceptorHandler()).addPathPatterns("/cmbc/**");
         super.addInterceptors(registry);
-    }*/
+    }
 
    /* @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {

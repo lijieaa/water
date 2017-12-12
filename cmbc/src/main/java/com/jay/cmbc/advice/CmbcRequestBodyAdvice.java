@@ -16,7 +16,7 @@ import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 
-@RestControllerAdvice
+//@RestControllerAdvice
 public class CmbcRequestBodyAdvice implements RequestBodyAdvice{
 
     private static final Log logger = LogFactory.getLog(CmbcRequestBodyAdvice.class);

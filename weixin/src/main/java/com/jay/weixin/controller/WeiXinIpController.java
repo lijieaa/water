@@ -3,6 +3,7 @@ package com.jay.weixin.controller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.oauth2.client.OAuth2RestOperations;
@@ -19,6 +20,7 @@ public class WeiXinIpController {
     private static final Log logger = LogFactory.getLog(WeiXinIpController.class);
 
     @Autowired
+    @Qualifier("wxRestTemplate")
     private OAuth2RestOperations restTemplate;
 
 
