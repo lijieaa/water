@@ -1,18 +1,11 @@
 package com.jay.cmbc.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jay.cmbc.client.CmbcRestTemplate;
-import org.apache.commons.io.IOUtils;
+import com.jay.cmbc.client.CmbcRestTemplate1;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -38,7 +31,11 @@ public class CmbcController {
     private String queryMchnt;
 
     @Resource(name = "cmbcRestTemplate")
-    CmbcRestTemplate restTemplate;
+    CmbcRestTemplate1 restTemplate;
+
+
+    @Resource(name = "restTemplate")
+    RestTemplate restTemplate1;
 
     @RequestMapping(value = "lcbpPay", method = RequestMethod.POST)
     private ResponseEntity lcbpPay(@RequestBody Map data) {
@@ -57,5 +54,18 @@ public class CmbcController {
     @RequestMapping(value = "queryMchnt", method = RequestMethod.POST)
     private Map queryMchnt(@RequestBody Map data) throws IOException {
         return restTemplate.post(queryMchnt,data);
+    }
+
+
+
+    /**
+     * 查询商户
+     * @param data
+     * @return
+     */
+    @RequestMapping(value = "queryMchnt1", method = RequestMethod.POST)
+    private String queryMchnt1(HttpServletRequest request) throws IOException {
+        CmbcRestTemplate a = new CmbcRestTemplate();
+        return a.postForEntity(queryMchnt,request);
     }
 }
