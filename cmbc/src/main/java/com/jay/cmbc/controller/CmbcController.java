@@ -2,10 +2,12 @@ package com.jay.cmbc.controller;
 
 import com.jay.cmbc.client.CmbcRestTemplate;
 import com.jay.cmbc.client.CmbcRestTemplate1;
+import com.jay.cmbc.resolvers.Foo;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -52,7 +54,7 @@ public class CmbcController {
      * @return
      */
     @RequestMapping(value = "queryMchnt", method = RequestMethod.POST)
-    private Map queryMchnt(@RequestBody Map data) throws IOException {
+    private Map queryMchnt(Map data) throws IOException {
         return restTemplate.post(queryMchnt,data);
     }
 
@@ -67,5 +69,11 @@ public class CmbcController {
     private String queryMchnt1(HttpServletRequest request) throws IOException {
         CmbcRestTemplate a = new CmbcRestTemplate();
         return a.postForEntity(queryMchnt,request);
+    }
+
+
+    @RequestMapping(value = "/test", method = RequestMethod.POST)
+    public String processFooBar(String data) {
+        return "xxxxxxxxxxxxxxxx";
     }
 }
